@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>GyF_Api.Challenge.Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GyF-Api-Challenge.Core\GyF-Api-Challenge.Core.csproj" />
+    <ProjectReference Include="..\GyF-Api-Challenge.Data\GyF-Api-Challenge.Data.csproj" />
+  </ItemGroup>
+
+</Project>
