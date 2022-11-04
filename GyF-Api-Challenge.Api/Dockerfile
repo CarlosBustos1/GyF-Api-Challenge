@@ -14,7 +14,7 @@ WORKDIR "/src/GyF-Api-Challenge.Api"
 RUN dotnet build "GyF-Api-Challenge.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "GyF-Api-Challenge.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "GyF-Api-Challenge.Api.csproj" -c Release -o /app/publish 
 
 FROM base AS final
 WORKDIR /app
