@@ -25,3 +25,10 @@ Para compilar
 ```
 
 4. abrir un navegador y navegar a * [http://localhost:1234/swagger/index.html](http://localhost:1234/swagger/index.html)
+
+Uso
+-----
+La Api cuenta con 3 controllers.
+  * Auth - Permite obtener un token. Las credenciales son: usuario | 123456
+  * Cliente ( se puede utilizar sin autenticación)
+  * ClienteSeguro ( se requiere del token devuelto por el endpoint /api/Auth )
