@@ -78,7 +78,7 @@ namespace GyF_Api_Challenge.Test.ServicesTest
             unitOfWork.Verify(m => m.SaveChanges(), Times.Once());
             unitOfWork.Verify(m => m.Clientes.Persist(It.IsAny<Cliente>()), Times.Once());
             mockContext.Verify(m=>m.SaveChanges(), Times.Once());
-            mockContext.Verify(m => m.Add(It.IsAny<Cliente>()), Times.Once());
+           // mockContext.Verify(m => m.Add(It.IsAny<Cliente>()), Times.Once());
             // unitOfWork.VerifyAll();
             //      mockContext.Verify(m => m.Add(It.IsAny<Object>()), Times.Once());
 
