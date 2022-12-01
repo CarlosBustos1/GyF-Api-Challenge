@@ -16,9 +16,9 @@ namespace GyF_Api_Challenge.Data
         {
             _gyFContext = gyFContext;
         }
-        public IUpdatebleRepository<Cliente, int> _clientes;
+        public IUpdatableRepository<Cliente, int> _clientes;
 
-        public IUpdatebleRepository<Cliente, int> Clientes
+        public virtual IUpdatableRepository<Cliente, int> Clientes
         {
             get
             {
@@ -31,7 +31,7 @@ namespace GyF_Api_Challenge.Data
             }
         }
 
-        public void SaveChanges()
+        public virtual void SaveChanges()
         {
             _gyFContext.SaveChanges();
         }

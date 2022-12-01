@@ -1,6 +1,6 @@
 ﻿namespace GyF_Api_Challenge.Data.Interfaces
 {
-    public interface IUpdatebleRepository<TEntity, TId>  : IReadonlyRepository<TEntity, TId> where TEntity : class, new()
+    public interface IUpdatableRepository<TEntity, TId>  : IReadonlyRepository<TEntity, TId> where TEntity : class, new()
     {
         void Persist(TEntity entity);
 

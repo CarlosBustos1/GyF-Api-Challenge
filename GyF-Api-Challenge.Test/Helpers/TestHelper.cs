@@ -9,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GyF_Api_Challenge.Api.MappingProfiles;
+using Moq;
+using GyF_Api_Challenge.Api.Models;
+using GyF_Api_Challenge.Core.Dtos;
+using GyF_Api_Challenge.Core.Models;
 
 namespace GyF_Api_Challenge.Test.Helpers
 {
@@ -39,6 +43,32 @@ namespace GyF_Api_Challenge.Test.Helpers
             return mapper;
         }
 
+        public static Mock<IMapper> MappingData()
+        {
+            var mappingService = new Mock<IMapper>();
+
+            //CreateMap<BaseClienteModel, BaseClienteDto>();
+            //CreateMap<UpdateClienteModel, UpdateClienteDto>();
+
+            //CreateMap<BaseClienteDto, Cliente>();
+            //CreateMap<UpdateClienteDto, Cliente>();
+
+            //CreateMap<Cliente, ClienteDto>();
+            //CreateMap<ClienteDto, ClienteModel>();
+          //  UserDetail im = getUserDetail(); // get value of UserDetails
+
+            mappingService.Setup(m => m.Map<Cliente, ClienteDto>(It.IsAny<Cliente>())).Returns(new ClienteDto
+            {
+                Id=1
+            });
+            mappingService.Setup(m => m.Map<BaseClienteDto, Cliente>(It.IsAny<BaseClienteDto>())).Returns(new Cliente
+            {
+                Id = 1
+            });
+            
+
+            return mappingService;
+        }
         public static ClienteService GetClienteService(GyFContext dbcontext)
         {
             //Arrange

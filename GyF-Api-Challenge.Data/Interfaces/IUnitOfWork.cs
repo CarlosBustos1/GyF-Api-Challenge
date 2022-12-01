@@ -9,7 +9,7 @@ namespace GyF_Api_Challenge.Data.Interfaces
 {
     public interface IUnitOfWork
     {
-        public IUpdatebleRepository<Cliente,int> Clientes { get; }
+        public IUpdatableRepository<Cliente,int> Clientes { get; }
 
         public void SaveChanges();
     }

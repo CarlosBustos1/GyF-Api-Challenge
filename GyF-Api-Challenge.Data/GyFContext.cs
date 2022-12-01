@@ -10,7 +10,7 @@ namespace GyF_Api_Challenge.Data
     public class GyFContext :IdentityDbContext
     {
       
-        public DbSet<Cliente> Clientes { get; set; }
+        public virtual DbSet<Cliente> Clientes { get; set; }
 
         public GyFContext():base()
         {

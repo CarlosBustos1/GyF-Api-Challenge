@@ -5,7 +5,7 @@ using System.Text;
 namespace GyF_Api_Challenge.Data.Repositories
 {
 
-    public class UpdatableRepository<TEntity, TId> : ReadonlyRepository<TEntity, TId>, IUpdatebleRepository<TEntity, TId> where TEntity : class, new()
+    public class UpdatableRepository<TEntity, TId> : ReadonlyRepository<TEntity, TId>, IUpdatableRepository<TEntity, TId> where TEntity : class, new()
     {
         protected readonly GyFContext GyFContext;
 
@@ -23,7 +23,7 @@ namespace GyF_Api_Challenge.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public void Persist(TEntity entity)
+        public virtual void Persist(TEntity entity)
         {
             GyFContext.Add(entity);
         }

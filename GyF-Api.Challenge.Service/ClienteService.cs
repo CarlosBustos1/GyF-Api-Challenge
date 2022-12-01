@@ -40,7 +40,7 @@ namespace GyF_Api.Challenge.Service
 
         public int Create(BaseClienteDto dto)
         {
-            var cliente = _mapper.Map<Cliente>(dto);
+            var cliente = _mapper.Map<BaseClienteDto,Cliente>(dto);
 
 
             _unitOfWork.Clientes.Persist(cliente);
